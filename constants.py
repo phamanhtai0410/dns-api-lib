@@ -8,7 +8,7 @@ from .chains import ethereum, goerli, bsc, bsc_testnet, zksync, zksync_testnet, 
 
 PAGE_SIZE_DEFAULT = 10
 
-NFT_CURRENT_ORDER_ID_KEY = 'inz.nft:current_order_id'
+NFT_CURRENT_ORDER_ID_KEY = 'dns.nft:current_order_id'
 
 CHAIN_BY_IDS = {
     1: ethereum,
