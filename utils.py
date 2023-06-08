@@ -11,6 +11,9 @@ from random import choice
 import bson.json_util
 from bson import ObjectId
 from web3 import Web3
+from ens import BaseENS
+from eth_utils import to_int
+
 
 util_web3 = Web3()
 
@@ -67,3 +70,14 @@ def set_name_services(redis_cluster, address: str, data: list):
 
 # create smc status
 # f'smc:_id:{_contract_id}:create_smc:status'
+
+
+def get_dsn_erc721_token_id(domain_name):
+    '''
+    '''
+    _data = BaseENS.labelhash(domain_name)
+    return str(to_int(_data))
+
+def get_dsn_erc1155_token_id(domain_name):
+    _data = BaseENS.namehash(domain_name)
+    return str(to_int(_data))

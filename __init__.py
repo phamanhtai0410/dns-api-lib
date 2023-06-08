@@ -4,7 +4,7 @@
         -
         -
 """
-from .utils import dt_utcnow, is_oid, allowed_file, get_crypto_currency_address, get_name_services, set_name_services
+from .utils import dt_utcnow, is_oid, allowed_file, get_crypto_currency_address, get_name_services, set_name_services, get_dsn_erc721_token_id, get_dsn_erc1155_token_id
 from .client import ClientAPI, AsyncClient
 from .logger import logger
 from .dao import DaoModel, AsyncDaoModel
